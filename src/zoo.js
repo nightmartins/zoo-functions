@@ -1,12 +1,17 @@
 const data = require('./data');
 
 function getSpeciesByIds(...ids) {
-  return data.species.filter((animal) => ids.includes(animal.id));
+  return data.species.filter((specie) => ids.includes(specie.id));
 }
+// Consultei o reposotório da aluna Ariane Ueti para acertar detalhes da função.
+// link: https://github.com/tryber/sd-014-b-project-zoo-functions/pull/68/files
 
 function getAnimalsOlderThan(animal, age) {
-  // seu código aqui
+  const animalsList = data.species.find((specie) => specie.name === animal);
+  return animalsList.residents.every((resident) => resident.age > age);
 }
+// Consultei o reposotório do aluno Leomar Linhares para acertar detalhes da função.
+// link: https://github.com/tryber/sd-014-b-project-zoo-functions/pull/75/files
 
 function getEmployeeByName(employeeName) {
   // seu código aqui
