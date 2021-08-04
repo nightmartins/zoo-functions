@@ -14,7 +14,9 @@ function getAnimalsOlderThan(animal, age) {
 // link: https://github.com/tryber/sd-014-b-project-zoo-functions/pull/75/files
 
 function getEmployeeByName(employeeName) {
-  // seu código aqui
+  const selectedName = data.employees
+    .find((employee) => employee.firstName === employeeName || employee.lastName === employeeName);
+  return (selectedName === undefined) ? {} : selectedName;
 }
 
 function createEmployee(personalInfo, associatedWith) {
