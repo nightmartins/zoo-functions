@@ -20,7 +20,12 @@ function getEmployeeByName(employeeName) {
 }
 
 function createEmployee(personalInfo, associatedWith) {
-  // seu código aqui
+  const employeesList = data.employees;
+  const newEmployee = {
+    personalInfo,
+    associatedWith,
+  };
+  return Object.assign(employeesList, newEmployee);
 }
 
 function isManager(id) {
