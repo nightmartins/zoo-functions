@@ -28,11 +28,23 @@ function createEmployee(personalInfo, associatedWith) {
 }
 
 function isManager(id) {
-  // seu código aqui
+  //   // array com ids dos employees
+  //   const employeesIds = Object.values(data.employees.id);
+  //   // comparar se o .responsibleFor de cada um dos employees contem algum id dos employees
+
 }
 
-function addEmployee(id, firstName, lastName, managers, responsibleFor) {
-  // seu código aqui
+function addEmployee(id, firstName, lastName, managers = [], responsibleFor = []) {
+  const newEmployee = {
+    id,
+    firstName,
+    lastName,
+    managers,
+    responsibleFor,
+  };
+
+  data.employees.push(newEmployee);
+  return data.employees;
 }
 
 function countAnimals(species) {
