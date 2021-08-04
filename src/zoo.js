@@ -20,12 +20,11 @@ function getEmployeeByName(employeeName) {
 }
 
 function createEmployee(personalInfo, associatedWith) {
-  const employeesList = data.employees;
   const newEmployee = {
-    personalInfo,
-    associatedWith,
+    ...personalInfo,
+    ...associatedWith,
   };
-  return Object.assign(employeesList, newEmployee);
+  return newEmployee;
 }
 
 function isManager(id) {
