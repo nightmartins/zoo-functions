@@ -1,3 +1,4 @@
+const { prices } = require('./data');
 const data = require('./data');
 
 /* ~~~~~~~ REQUISITO 1 ~~~~~~~ */
@@ -69,7 +70,13 @@ function countAnimals(animalSpecie) {
 
 /* ~~~~~~~ REQUISITO 8 ~~~~~~~ */
 function calculateEntry(entrants) {
-  // seu código aqui
+  if (entrants === undefined) {
+    return 0;
+  } else if (Object.values(entrants).length === 0) {
+      return 0;
+  }
+  const { Adult = 0, Senior = 0, Child = 0 } = entrants;
+  return Adult * prices.Adult + Senior * prices.Senior + Child * prices.Child;
 }
 
 /* ~~~~~~~ REQUISITO 9 ~~~~~~~ */
