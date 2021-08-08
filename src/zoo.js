@@ -70,10 +70,8 @@ function countAnimals(animalSpecie) {
 
 /* ~~~~~~~ REQUISITO 8 ~~~~~~~ */
 function calculateEntry(entrants) {
-  if (entrants === undefined) {
+  if (entrants === undefined || Object.values(entrants).length === 0) {
     return 0;
-  } else if (Object.values(entrants).length === 0) {
-      return 0;
   }
   const { Adult = 0, Senior = 0, Child = 0 } = entrants;
   return Adult * prices.Adult + Senior * prices.Senior + Child * prices.Child;
