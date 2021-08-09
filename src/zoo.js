@@ -103,13 +103,18 @@ function getSchedule(dayName) {
 }
 
 /* ~~~~~~~ REQUISITO 11 ~~~~~~~ */
-function getOldestFromFirstSpecies(id) {
-  // seu código aqui
+function getOldestFromFirstSpecies(selectedId) {
+// const firstAnimal = data.employees.find((item) => item.id = selectedId);
+// return [firstAnimal.name, firstAnimal.sex, firstAnimal.age];
 }
 
 /* ~~~~~~~ REQUISITO 12 ~~~~~~~ */
 function increasePrices(percentage) {
-  // seu código aqui
+  const { Adult, Senior, Child } = data.prices;
+  const increasePercentage = percentage / 100;
+  data.prices.Adult = Math.round((Adult * increasePercentage + Adult) * 100) / 100;
+  data.prices.Senior = Math.round((Senior * increasePercentage + Senior) * 100) / 100;
+  data.prices.Child = Math.round((Child * increasePercentage + Child) * 100) / 100;
 }
 
 /* ~~~~~~~ REQUISITO 13 ~~~~~~~ */
