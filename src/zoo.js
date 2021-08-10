@@ -52,13 +52,13 @@ function addEmployee(id, firstName, lastName, managers = [], responsibleFor = []
 
 /* ~~~~~~~ REQUISITO 7 ~~~~~~~ */
 function countAnimals(animalSpecie) {
-  if (animalSpecie === undefined) { // caso não seja passado parâmetro, 
+  if (animalSpecie === undefined) { // caso não seja passado parâmetro
     return data.species.reduce((accumulator, specie) => {
       accumulator[specie.name] = specie.residents.length; // retornar o nome da espécie do animal e a quantidade de residentes, para todos os residentes
       return accumulator;
     }, {}); // em forma de objeto
   }
-  const selectedAnimal = data.species.find((specie) => specie.name === animalSpecie); // caso seja passado um parâmetro, 
+  const selectedAnimal = data.species.find((specie) => specie.name === animalSpecie); // caso seja passado um parâmetro
   return selectedAnimal.residents.length; // retornar o número de residentes da espécie selecionada.
 }
 // Consultei o reposotório do aluno Wellington Fonseca para corrigir a escrita da função.
