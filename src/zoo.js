@@ -58,8 +58,8 @@ function countAnimals(animalSpecie) {
       return accumulator;
     }, {}); // em forma de objeto
   }
-  const selectedAnimal = data.species.find((specie) => specie.name === animalSpecie); // caso seja passado um parâmetro
-  return selectedAnimal.residents.length; // retornar o número de residentes da espécie selecionada.
+  const selectedAnimal = data.species.find((specie) => specie.name === animalSpecie); // caso seja passado um parâmetro, procurar a espécie selecionada
+  return selectedAnimal.residents.length; // e retornar o número de residentes da espécie selecionada.
 }
 // Consultei o reposotório do aluno Wellington Fonseca para corrigir a escrita da função.
 // link: https://github.com/tryber/sd-014-b-project-zoo-functions/pull/81/files
