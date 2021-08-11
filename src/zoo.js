@@ -34,6 +34,7 @@ function createEmployee(personalInfo, associatedWith) {
 
 /* ~~~~~~~ REQUISITO 5 ~~~~~~~ */
 function isManager(id) {
+  return data.employees.some((employee) => employee.managers.includes(id));
 }
 
 /* ~~~~~~~ REQUISITO 6 ~~~~~~~ */
@@ -54,7 +55,7 @@ function addEmployee(id, firstName, lastName, managers = [], responsibleFor = []
 function countAnimals(animalSpecie) {
   if (animalSpecie === undefined) { // caso não seja passado parâmetro
     return data.species.reduce((accumulator, specie) => {
-      accumulator[specie.name] = specie.residents.length; // retornar o nome da espécie do animal e a quantidade de residentes, para todos os residentes
+      accumulator[specie.name] = specie.residents.length; // retornar o nome da espécie do animal e a quantidade de residentes
       return accumulator;
     }, {}); // em forma de objeto
   }
